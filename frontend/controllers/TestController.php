@@ -5,13 +5,10 @@ use yii\web\Controller;
 
 class TestController extends Controller
 {
+    //public $layout = false;
+
     public function actionIndex($msg = '')
     {
-        echo 'Say '.$msg;
-    }
-
-    public function actionPostComment()
-    {
-        echo 'post comment';
+        return $this->render('say', ['message' => $msg]);
     }
 }
